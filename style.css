@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&family=Kiwi+Maru:wght@400;500&family=Allura&display=swap');
 
 :root {
   --bg: #FFFFFF;
@@ -27,14 +27,28 @@ body {
   font-size: 16px;
 }
 
-/* ---------- ヒーロー(noteバナー風) ---------- */
+/* ---------- ヒーロー(写真背景) ---------- */
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #F9F4ED 0%, var(--cream) 100%);
-  padding: 88px 24px 76px;
+  background-image: url('images/hero-bg.png');
+  background-size: cover;
+  background-position: center 30%;
+  padding: 96px 24px 84px;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   border-bottom: 1px solid var(--line);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 60% at 50% 55%, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.16) 50%, rgba(255, 255, 255, 0) 75%);
+  pointer-events: none;
 }
 
 .hero-inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
@@ -60,10 +74,10 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
+  font-family: 'Kiwi Maru', 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
   font-size: clamp(36px, 6.5vw, 52px);
-  font-weight: 900;
-  letter-spacing: 0.12em;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   margin-bottom: 14px;
   color: var(--brown);
 }
@@ -450,7 +464,7 @@ body {
 
   .pc-only { display: none; }
 
-  .hero { padding: 64px 20px 52px; }
+  .hero { padding: 64px 20px 52px; min-height: 400px; }
 
   .section { padding: 48px 20px; }
 }
