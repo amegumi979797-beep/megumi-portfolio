@@ -11,6 +11,9 @@
 
 <!-- ヒーロー -->
 <header class="hero">
+  <span class="hero-sparkle s1" aria-hidden="true">✿</span>
+  <span class="hero-sparkle s2" aria-hidden="true">✦</span>
+  <span class="hero-sparkle s3" aria-hidden="true">🌸</span>
   <div class="hero-inner">
     <p class="hero-eyebrow">Online Assistant Portfolio</p>
     <h1>荒木 めぐみ</h1>
@@ -218,6 +221,34 @@
   <p>このポートフォリオサイトも Claude Code を使って制作しました 🛠️</p>
   <p>&copy; 2026 Megumi Araki</p>
 </footer>
+
+<script>
+(() => {
+  const targets = document.querySelectorAll(
+    '.about-text, .about-career, .card, .gallery-item, .expression-item, .service-col, .contact-box, .gallery-subhead'
+  );
+  targets.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = (i % 4) * 0.08 + 's';
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(el => io.observe(el));
+})();
+</script>
 
 </body>
 </html>
