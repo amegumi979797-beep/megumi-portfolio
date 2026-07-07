@@ -425,6 +425,21 @@ body {
 
 .contact-note { margin-top: 18px; color: var(--ink-soft); }
 
+.contact-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.contact-btn-line {
+  background: #06C755;
+}
+
+.contact-btn-line:hover {
+  background: #05a648;
+}
+
 /* ---------- フッター(クリーム系でヒーローと対に) ---------- */
 .footer {
   background: var(--cream);
