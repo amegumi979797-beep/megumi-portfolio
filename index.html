@@ -67,32 +67,58 @@
 <section class="section section-alt" id="automation">
   <h2><span class="section-num">02</span>AI活用実績 ― 業務の自動化・効率化</h2>
   <p class="section-lead">
-    Claude Code(AIエージェント)を活用し、実際の業務で使っている自動化の仕組みを自分で構築しています。
+    オンライン秘書としての実務の中で、日々の繰り返し業務をClaude Code(AIエージェント)で仕組み化しています。
+    「作っただけ」ではなく、実際に継続して運用しているものを中心にご紹介します。
   </p>
   <div class="card-grid">
-    <div class="card">
-      <div class="card-icon">📋</div>
-      <h3>チャット履歴の月次転記自動化</h3>
-      <p>ChatWorkの依頼内容を毎月Googleスプレッドシートの報酬管理表へ整理・転記する作業を、AIスクリプトで自動化。手作業数時間分を数分に短縮。</p>
-      <p class="card-tag">ChatWork API / Google スプレッドシート / Python</p>
-    </div>
-    <div class="card">
+    <div class="card card-featured">
       <div class="card-icon">🧾</div>
       <h3>請求書PDFの読取・仕訳サポート</h3>
-      <p>請求書PDFから日付・取引先・金額・税区分を自動抽出し、経理仕訳の下準備を効率化。複数枚の請求書処理もスピーディに。</p>
-      <p class="card-tag">PDF読取 / 経理サポート</p>
+      <div class="card-stat">
+        <span class="stat-before">月4〜6時間</span>
+        <span class="stat-arrow">→</span>
+        <span class="stat-after">約20分</span>
+      </div>
+      <p class="card-stat-main">月あたり約3時間40分〜5時間40分の作業時間削減</p>
+      <p class="card-stat-note">※直近の実績値です。案件数・内容により変動します(参考:削減率 約90%)</p>
+      <p>請求書PDFの内容確認・項目転記・案件照合・不明点の洗い出しを、AIによるPDF読取・仕訳一覧化の仕組みに置き換え。要確認項目のみ人が最終確認する運用にしています。月あたり約30件を処理。</p>
+      <p class="card-tag">PDF読取 / 経理サポート / 月間約30件処理</p>
     </div>
-    <div class="card">
-      <div class="card-icon">📅</div>
-      <h3>打ち合わせ案内文・議事録の自動生成スキル</h3>
-      <p>カレンダーのスクショから日時を読み取ってLINE・ChatWork向けの打ち合わせ案内文を生成するスキルと、会議メモから決まった書式の議事録を清書するスキルをClaude Codeに構築。打ち合わせの前後をまるごと効率化。</p>
-      <p class="card-tag">Claude Code スキル開発 / 画像読取</p>
-    </div>
-    <div class="card">
+    <div class="card card-featured">
       <div class="card-icon">✍️</div>
-      <h3>note記事の下書き生成</h3>
-      <p>日々の学習メモを読み込んでnote記事の下書きを生成する、自分専用のライティング支援ツールを作成。継続的な発信に活用中。</p>
-      <p class="card-tag">ライティング支援 / コンテンツ制作</p>
+      <h3>note記事の制作効率化</h3>
+      <div class="card-stat">
+        <span class="stat-before">1本 約2時間</span>
+        <span class="stat-arrow">→</span>
+        <span class="stat-after">約30分〜1時間</span>
+      </div>
+      <p class="card-stat-main">月あたり約8〜12時間の制作時間削減(月8本運用)</p>
+      <p class="card-stat-note">※画像作成の準備工程まで含めた所要時間です</p>
+      <p>日々の学習メモから、下書き生成・レビュー・画像作成準備までを仕組み化。月8本のペースで継続発信しています。</p>
+      <p class="card-tag">ライティング支援 / コンテンツ制作 / 月8本運用</p>
+    </div>
+    <div class="card card-featured">
+      <div class="card-icon">📅</div>
+      <span class="card-badge">ほぼ毎日運用中</span>
+      <h3>打ち合わせ案内文の自動生成</h3>
+      <p>カレンダーのスクショや日時指定から、LINE・ChatWork向けの打ち合わせ案内文を自動生成。1件あたり5分以内で完成します。効果としては小さな業務ですが、日常的に発生する定型作業をゼロから作らず済む形にした事例です。</p>
+      <p class="card-tag">Claude Code スキル開発 / 画像読取 / 日次運用</p>
+    </div>
+    <div class="card card-featured">
+      <div class="card-icon">🔁</div>
+      <h3>note→Threadsへのコンテンツ再活用</h3>
+      <p>完成したnote記事をもとに、Threads向けの要約投稿・構成案を自動生成。1つのコンテンツをゼロから作り直さず、別媒体・別形式へ展開する仕組みとして運用しています。月4本のペースで発信中。</p>
+      <p class="card-tag">コンテンツ再活用 / 月4本運用</p>
+    </div>
+  </div>
+
+  <div class="card-sub-section">
+    <p class="card-sub-heading">その他、日常業務で使っている自動化</p>
+    <div class="card-mini-grid">
+      <div class="card-mini">
+        <strong>チャット履歴の月次転記自動化</strong>
+        <span>ChatWorkの依頼内容を毎月Googleスプレッドシートの報酬管理表へ整理・転記する作業をスクリプトで自動化。</span>
+      </div>
     </div>
   </div>
 </section>
